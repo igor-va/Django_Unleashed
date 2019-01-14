@@ -8,9 +8,14 @@
     <h2>Startup List</h2>
     <ul>
         {% for startup in startup_list %}
-        <li><a href="">{{ startup.name }}</a></li>
-        {% empty %}
-        <li><em>No Startups Available</em></li>
+            <li>
+                <a href="{% url 'organizer_startup_detail' slug=startup.slug %}">
+                    {{ startup.name }}</a>
+            </li>
+            {% empty %}
+            <li>
+                <em>No Startups Available</em>
+            </li>
         {% endfor %}
     </ul>
 {% endblock %}

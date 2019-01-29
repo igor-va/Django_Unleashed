@@ -2,8 +2,56 @@ from django.shortcuts import (
     get_object_or_404, redirect, render)
 from django.views.generic import View
 
-from .forms import TagForm
-from .models import Startup, Tag
+from .forms import (
+    NewsLinkForm, StartupForm, TagForm)
+from .models import NewsLink, Startup, Tag
+from .utils import (
+    ObjectCreateMixin, ObjectUpdateMixin)
+
+
+class NewsLinkCreate(ObjectCreateMixin, View):
+    form_class = NewsLinkForm
+    template_name = 'organizer/newslink_form.html'
+
+
+class NewsLinkUpdate(View):
+    form_class = NewsLinkForm
+    template_name = (
+        'organizer/newslink_form_update.html')
+
+    def get(self, request, pk):
+        newslink = get_object_or_404(
+            NewsLink, pk=pk)
+        context = {
+            'form': self.form_class(
+                instance=newslink),
+            'newslink': newslink,
+        }
+        return render(
+            request, self.template_name, context)
+
+    def post(self, request, pk):
+        newslink = get_object_or_404(
+            NewsLink, pk=pk)
+        bound_form = self.form_class(
+            request.POST, instance=newslink)
+        if bound_form.is_valid():
+            new_newslink = bound_form.save()
+            return redirect(new_newslink)
+        else:
+            context = {
+                'form': bound_form,
+                'newslink': newslink,
+            }
+            return render(
+                request,
+                self.template_name,
+                context)
+
+
+class StartupCreate(ObjectCreateMixin, View):
+    form_class = StartupForm
+    template_name = 'organizer/startup_form.html'
 
 
 def startup_detail(request, slug):
@@ -22,26 +70,16 @@ def startup_list(request):
         {'startup_list': Startup.objects.all()})
 
 
-class TagCreate(View):
+class StartupUpdate(ObjectUpdateMixin, View):
+    form_class = StartupForm
+    model = Startup
+    template_name = (
+        'organizer/startup_form_update.html')
+
+
+class TagCreate(ObjectCreateMixin, View):
     form_class = TagForm
     template_name = 'organizer/tag_form.html'
-
-    def get(self, request):
-        return render(
-            request,
-            self.template_name,
-            {'form': self.form_class()})
-
-    def post(self, request):
-        bound_form = self.form_class(request.POST)
-        if bound_form.is_valid():
-            new_tag = bound_form.save()
-            return redirect(new_tag)
-        else:
-            return render(
-                request,
-                self.template_name,
-                {'form': bound_form})
 
 
 def tag_detail(request, slug):
@@ -58,3 +96,10 @@ def tag_list(request):
         request,
         'organizer/tag_list.html',
         {'tag_list': Tag.objects.all()})
+
+
+class TagUpdate(ObjectUpdateMixin, View):
+    form_class = TagForm
+    model = Tag
+    template_name = (
+        'organizer/tag_form_update.html')

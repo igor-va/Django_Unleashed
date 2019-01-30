@@ -37,10 +37,10 @@ class Startup(models.Model):
         unique=True,
         help_text='A label for URL config.')
     description = models.TextField()
-    founded_date = models.DateField(
-        'date founded')
+    # founded_date = models.DateField(
+    #     'date founded')
     contact = models.EmailField()
-    website = models.URLField(max_length=255)
+    # website = models.URLField(max_length=255)
     tags = models.ManyToManyField(Tag)
 
     class Meta:
@@ -76,6 +76,11 @@ class NewsLink(models.Model):
 
     def get_absolute_url(self):
         return self.startup.get_absolute_url()
+
+    def get_delete_url(self):
+        return reverse(
+            'organizer_newslink_delete',
+            kwargs={'pk': self.pk})
 
     def get_update_url(self):
         return reverse(

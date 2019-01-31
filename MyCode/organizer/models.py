@@ -41,11 +41,11 @@ class Startup(models.Model):
         unique=True,
         help_text='A label for URL config.')
     description = models.TextField()
-    # founded_date = models.DateField(
-    #     'date founded')
+    founded_date = models.DateField(
+        'date founded')
     contact = models.EmailField()
-    # website = models.URLField(max_length=255)
-    tags = models.ManyToManyField(Tag)
+    website = models.URLField(max_length=255)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     class Meta:
         ordering = ['name']
@@ -69,6 +69,7 @@ class Startup(models.Model):
 
 class NewsLink(models.Model):
     title = models.CharField(max_length=63)
+    slug = models.SlugField(max_length=63)
     pub_date = models.DateField('date published')
     link = models.URLField(max_length=255)
     startup = models.ForeignKey(Startup, on_delete=True)
@@ -77,6 +78,7 @@ class NewsLink(models.Model):
         verbose_name = 'news article'
         ordering = ['-pub_date']
         get_latest_by = 'pub_date'
+        unique_together = ('slug', 'startup')
 
     def __str__(self):
         return "{}: {}".format(

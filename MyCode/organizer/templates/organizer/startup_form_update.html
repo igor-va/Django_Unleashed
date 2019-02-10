@@ -1,21 +1,21 @@
 {% extends parent_template|default:"organizer/base_organizer.html" %}
 
 {% block title %}
-{{ block.super }} - Link News Article to Startup
+{{ block.super }} - Update Startup
 {% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="offset-by-two eight columns">
       <form
-          action="{% url 'organizer_newslink_create' %}"
+          action="{{ startup.get_update_url }}"
           method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button
             class="button-primary"
             type="submit">
-          Link Article</button>
+          Update Startup</button>
       </form>
     </div>
   </div>

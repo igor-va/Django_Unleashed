@@ -1,25 +1,26 @@
-{% extends parent_template|default:"organizer/base_organizer.html" %}
+{% extends parent_template|default:"blog/base_blog.html" %}
 
 {% block title %}
-{{ block.super }} - Delete Tag
+{{ block.super }} - Delete Blog Post
 {% endblock %}
 
 {% block content %}
   <div class="row">
     <div class="offset-by-two eight columns">
       <form
-          action="{{ tag.get_delete_url }}"
+          action="{{ post.get_delete_url }}"
           method="post">
         {% csrf_token %}
         <p>
           Are you sure you want to delete
-          tag {{ tag.name }}?
+          the blog post titled {{ post.title }}?
         </p>
         <a
-            href="{{ tag.get_absolute_url }}"
+            href="{{ post.get_absolute_url }}"
             class="button button-primary">
           Cancel</a>
-        <button type="submit">Delete Tag</button>
+        <button type="submit">
+          Delete Blog Post</button>
       </form>
     </div>
   </div>

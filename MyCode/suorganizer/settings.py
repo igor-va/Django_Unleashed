@@ -22,7 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE_ID = 1
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '#)zcb_)1(#7ro$sy&j8kd-dv9hnygqv21hhjzi+^fhblkz=9i+'
+SECRET_KEY = 'l)zht&^pddidsyqe$+09%se1*ba2#b_q-!j0^v$(-3c-=-vmq4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -57,26 +57,25 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
 )
 
 ROOT_URLCONF = 'suorganizer.urls'
 
-TEMPLATES = [
-    {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
+TEMPLATES = [{
+    'BACKEND': 'django.template.backends.django.DjangoTemplates',
+    'DIRS': [
+        os.path.join(BASE_DIR, 'templates'),
+    ],
+    'APP_DIRS': True,
+    'OPTIONS': {
+        'context_processors': [
+            'django.template.context_processors.debug',
+            'django.template.context_processors.request',
+            'django.contrib.auth.context_processors.auth',
+            'django.contrib.messages.context_processors.messages',
+        ],
     },
-]
+}]
 
 WSGI_APPLICATION = 'suorganizer.wsgi.application'
 
@@ -120,3 +119,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)

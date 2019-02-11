@@ -1,8 +1,10 @@
 from django.conf.urls import url
 
+from ..models import Tag
+from ..utils import DetailView
 from ..views import (
     TagCreate, TagDelete, TagList, TagPageList,
-    TagUpdate, tag_detail)
+    TagUpdate)
 
 urlpatterns = [
     url(r'^$',
@@ -15,7 +17,11 @@ urlpatterns = [
         TagPageList.as_view(),
         name='organizer_tag_page'),
     url(r'^(?P<slug>[\w\-]+)/$',
-        tag_detail,
+        DetailView.as_view(
+            context_object_name='tag',
+            model=Tag,
+            template_name=(
+                'organizer/tag_detail.html')),
         name='organizer_tag_detail'),
     url(r'^(?P<slug>[\w-]+)/delete/$',
         TagDelete.as_view(),

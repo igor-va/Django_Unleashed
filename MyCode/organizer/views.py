@@ -10,8 +10,8 @@ from .forms import (
     NewsLinkForm, StartupForm, TagForm)
 from .models import NewsLink, Startup, Tag
 from .utils import (
-    ObjectCreateMixin, ObjectDeleteMixin,
-    ObjectUpdateMixin)
+    DetailView, ObjectCreateMixin,
+    ObjectDeleteMixin, ObjectUpdateMixin)
 
 
 class NewsLinkCreate(ObjectCreateMixin, View):
@@ -86,13 +86,8 @@ class StartupDelete(ObjectDeleteMixin, View):
         'organizer/startup_confirm_delete.html')
 
 
-def startup_detail(request, slug):
-    startup = get_object_or_404(
-        Startup, slug__iexact=slug)
-    return render(
-        request,
-        'organizer/startup_detail.html',
-        {'startup': startup})
+class StartupDetail(DetailView):
+    model = Startup
 
 
 class StartupList(View):
@@ -157,13 +152,8 @@ class TagDelete(ObjectDeleteMixin, View):
         'organizer/tag_confirm_delete.html')
 
 
-def tag_detail(request, slug):
-    tag = get_object_or_404(
-        Tag, slug__iexact=slug)
-    return render(
-        request,
-        'organizer/tag_detail.html',
-        {'tag': tag})
+class TagDetail(DetailView):
+    model = Tag
 
 
 class TagList(View):

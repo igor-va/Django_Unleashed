@@ -1,14 +1,14 @@
 from django.conf.urls import url
 
 from ..models import Tag
-from ..utils import DetailView
 from ..views import (
-    TagCreate, TagDelete, TagList, TagPageList,
-    TagUpdate)
+    TagCreate, TagDelete, TagDetail, TagPageList,
+    TagUpdate, model_list)
 
 urlpatterns = [
     url(r'^$',
-        TagList.as_view(),
+        model_list,
+        {'model': Tag},
         name='organizer_tag_list'),
     url(r'^create/$',
         TagCreate.as_view(),
@@ -17,11 +17,7 @@ urlpatterns = [
         TagPageList.as_view(),
         name='organizer_tag_page'),
     url(r'^(?P<slug>[\w\-]+)/$',
-        DetailView.as_view(
-            context_object_name='tag',
-            model=Tag,
-            template_name=(
-                'organizer/tag_detail.html')),
+        TagDetail.as_view(),
         name='organizer_tag_detail'),
     url(r'^(?P<slug>[\w-]+)/delete/$',
         TagDelete.as_view(),

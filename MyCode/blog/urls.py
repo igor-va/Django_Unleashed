@@ -1,7 +1,8 @@
 from django.conf.urls import url
 
 from .views import (
-    PostCreate, PostDelete, PostList, PostUpdate,
+    # PostCreate,
+    PostDelete, PostList, PostUpdate,
     post_detail)
 
 urlpatterns = [

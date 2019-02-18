@@ -1,29 +1,41 @@
 from django.core.paginator import (
     EmptyPage, PageNotAnInteger, Paginator)
-from django.core.urlresolvers import (
+from django.urls import (
     reverse, reverse_lazy)
 from django.shortcuts import (
     get_object_or_404, redirect, render)
-from django.views.generic import (
-    CreateView, DeleteView,
-    DetailView, UpdateView, View)
+from django.views.generic import View
 
 from .forms import (
     NewsLinkForm, StartupForm, TagForm)
 from .models import NewsLink, Startup, Tag
+from .utils import (
+    DetailView, ObjectCreateMixin,
+    ObjectDeleteMixin, ObjectUpdateMixin)
 
 
-class NewsLinkCreate(CreateView):
+class NewsLinkCreate(ObjectCreateMixin, View):
     form_class = NewsLinkForm
-    model = NewsLink
+    template_name = 'organizer/newslink_form.html'
 
 
-class NewsLinkDelete(DeleteView):
-    model = NewsLink
+class NewsLinkDelete(View):
 
-    def get_success_url(self):
-        return (self.object.startup
-                .get_absolute_url())
+    def get(self, request, pk):
+        newslink = get_object_or_404(
+            NewsLink, pk=pk)
+        return render(
+            request,
+            'organizer/'
+            'newslink_confirm_delete.html',
+            {'newslink': newslink})
+
+    def post(self, request, pk):
+        newslink = get_object_or_404(
+            NewsLink, pk=pk)
+        startup = newslink.startup
+        newslink.delete()
+        return redirect(startup)
 
 
 class NewsLinkUpdate(View):
@@ -61,15 +73,17 @@ class NewsLinkUpdate(View):
                 context)
 
 
-class StartupCreate(CreateView):
+class StartupCreate(ObjectCreateMixin, View):
     form_class = StartupForm
-    model = Startup
+    template_name = 'organizer/startup_form.html'
 
 
-class StartupDelete(DeleteView):
+class StartupDelete(ObjectDeleteMixin, View):
     model = Startup
     success_url = reverse_lazy(
         'organizer_startup_list')
+    template_name = (
+        'organizer/startup_confirm_delete.html')
 
 
 class StartupDetail(DetailView):
@@ -118,22 +132,24 @@ class StartupList(View):
             request, self.template_name, context)
 
 
-class StartupUpdate(UpdateView):
+class StartupUpdate(ObjectUpdateMixin, View):
     form_class = StartupForm
     model = Startup
     template_name = (
         'organizer/startup_form_update.html')
 
 
-class TagCreate(CreateView):
+class TagCreate(ObjectCreateMixin, View):
     form_class = TagForm
-    model = Tag
+    template_name = 'organizer/tag_form.html'
 
 
-class TagDelete(DeleteView):
+class TagDelete(ObjectDeleteMixin, View):
     model = Tag
     success_url = reverse_lazy(
         'organizer_tag_list')
+    template_name = (
+        'organizer/tag_confirm_delete.html')
 
 
 class TagDetail(DetailView):
@@ -195,7 +211,7 @@ class TagPageList(View):
             request, self.template_name, context)
 
 
-class TagUpdate(UpdateView):
+class TagUpdate(ObjectUpdateMixin, View):
     form_class = TagForm
     model = Tag
     template_name = (

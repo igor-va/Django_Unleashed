@@ -1,93 +1,104 @@
+from django.urls import reverse_lazy
 from django.shortcuts import get_object_or_404
+from django.views.generic import (
+    CreateView, DeleteView, DetailView, ListView)
 
-from .models import NewsLink, Startup
+from core.utils import UpdateView
+
+from .forms import (
+    NewsLinkForm, StartupForm, TagForm)
+from .models import NewsLink, Startup, Tag
+from .utils import (
+    NewsLinkGetObjectMixin, PageLinksMixin,
+    StartupContextMixin)
 
 
-class NewsLinkGetObjectMixin():
+class NewsLinkCreate(
+        NewsLinkGetObjectMixin,
+        StartupContextMixin,
+        CreateView):
+    form_class = NewsLinkForm
+    model = NewsLink
 
-    def get_object(self, queryset=None):
+    def get_initial(self):
         startup_slug = self.kwargs.get(
             self.startup_slug_url_kwarg)
-        newslink_slug = self.kwargs.get(
-            self.slug_url_kwarg)
-        return get_object_or_404(
-            NewsLink,
-            slug__iexact=newslink_slug,
-            startup__slug__iexact=startup_slug)
+        self.startup = get_object_or_404(
+            Startup, slug__iexact=startup_slug)
+        initial = {
+            self.startup_context_object_name:
+                self.startup,
+        }
+        initial.update(self.initial)
+        return initial
 
 
-class PageLinksMixin:
-    page_kwarg = 'page'
+class NewsLinkDelete(
+        NewsLinkGetObjectMixin,
+        StartupContextMixin,
+        DeleteView):
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
 
-    def _page_urls(self, page_number):
-        return "?{pkw}={n}".format(
-            pkw=self.page_kwarg,
-            n=page_number)
-
-    def first_page(self, page):
-        # don't show on first page
-        if page.number > 1:
-            return self._page_urls(1)
-        return None
-
-    def previous_page(self, page):
-        if (page.has_previous()
-                and page.number > 2):
-            return self._page_urls(
-                page.previous_page_number())
-        return None
-
-    def next_page(self, page):
-        last_page = page.paginator.num_pages
-        if (page.has_next()
-                and page.number < last_page - 1):
-            return self._page_urls(
-                page.next_page_number())
-        return None
-
-    def last_page(self, page):
-        last_page = page.paginator.num_pages
-        if page.number < last_page:
-            return self._page_urls(last_page)
-        return None
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(
-            **kwargs)
-        page = context.get('page_obj')
-        if page is not None:
-            context.update({
-                'first_page_url':
-                    self.first_page(page),
-                'previous_page_url':
-                    self.previous_page(page),
-                'next_page_url':
-                    self.next_page(page),
-                'last_page_url':
-                    self.last_page(page),
-            })
-        return context
+    def get_success_url(self):
+        return (self.object.startup
+                .get_absolute_url())
 
 
-class StartupContextMixin():
-    startup_slug_url_kwarg = 'startup_slug'
-    startup_context_object_name = 'startup'
+class NewsLinkUpdate(
+        NewsLinkGetObjectMixin,
+        StartupContextMixin,
+        UpdateView):
+    form_class = NewsLinkForm
+    model = NewsLink
+    slug_url_kwarg = 'newslink_slug'
 
-    def get_context_data(self, **kwargs):
-        if hasattr(self, 'startup'):
-            context = {
-                self.startup_context_object_name:
-                    self.startup,
-            }
-        else:
-            startup_slug = self.kwargs.get(
-                self.startup_slug_url_kwarg)
-            startup = get_object_or_404(
-                Startup,
-                slug__iexact=startup_slug)
-            context = {
-                self.startup_context_object_name:
-                    startup,
-            }
-        context.update(kwargs)
-        return super().get_context_data(**context)
+
+class StartupCreate(CreateView):
+    form_class = StartupForm
+    model = Startup
+
+
+class StartupDelete(DeleteView):
+    model = Startup
+    success_url = reverse_lazy(
+        'organizer_startup_list')
+
+
+class StartupDetail(DetailView):
+    model = Startup
+
+
+class StartupList(PageLinksMixin, ListView):
+    model = Startup
+    paginate_by = 5  # 5 items per page
+
+
+class StartupUpdate(UpdateView):
+    form_class = StartupForm
+    model = Startup
+
+
+class TagCreate(CreateView):
+    form_class = TagForm
+    model = Tag
+
+
+class TagDelete(DeleteView):
+    model = Tag
+    success_url = reverse_lazy(
+        'organizer_tag_list')
+
+
+class TagDetail(DetailView):
+    model = Tag
+
+
+class TagList(PageLinksMixin, ListView):
+    paginate_by = 5
+    model = Tag
+
+
+class TagUpdate(UpdateView):
+    form_class = TagForm
+    model = Tag

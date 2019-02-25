@@ -5,6 +5,7 @@ from django.contrib.auth.forms import \
     AuthenticationForm
 from django.views.generic import RedirectView
 
+app_name = 'user'
 urlpatterns = [
     url(r'^$',
         RedirectView.as_view(

@@ -12,11 +12,11 @@ urlpatterns = [
             pattern_name='dj-auth:login',
             permanent=False)),
     url(r'^login/$',
-        auth_views.LoginView,
+        auth_views.LoginView.as_view(),
         {'template_name': 'user/login.html'},
         name='login'),
     url(r'^logout/$',
-        auth_views.LogoutView,
+        auth_views.LogoutView.as_view(),
         {'template_name': 'user/logged_out.html',
          'extra_context':
              {'form': AuthenticationForm}},

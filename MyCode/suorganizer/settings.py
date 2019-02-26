@@ -160,7 +160,7 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, "static"),)
 
 # Login Settings
 # https://docs.djangoproject.com/en/1.8/topics/auth/
-from django.urls import reverse_lazy
+from django.core.urlresolvers import reverse_lazy
 
 LOGIN_REDIRECT_URL = reverse_lazy('blog_post_list')
 LOGIN_URL = reverse_lazy('dj-auth:login')

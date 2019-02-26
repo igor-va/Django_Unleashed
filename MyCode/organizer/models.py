@@ -1,4 +1,4 @@
-from django.urls import reverse
+from django.core.urlresolvers import reverse
 from django.db import models
 
 
@@ -77,7 +77,7 @@ class NewsLink(models.Model):
     slug = models.SlugField(max_length=63)
     pub_date = models.DateField('date published')
     link = models.URLField(max_length=255)
-    startup = models.ForeignKey(Startup, on_delete=True)
+    startup = models.ForeignKey(Startup)
 
     class Meta:
         verbose_name = 'news article'

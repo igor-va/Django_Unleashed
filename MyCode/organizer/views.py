@@ -1,5 +1,9 @@
+from django.contrib.auth.decorators import \
+    permission_required
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
+from django.utils.decorators import \
+    method_decorator
 from django.views.generic import (
     CreateView, DeleteView, DetailView, ListView)
 
@@ -82,6 +86,14 @@ class StartupUpdate(UpdateView):
 class TagCreate(CreateView):
     form_class = TagForm
     model = Tag
+
+    @method_decorator(
+        permission_required(
+            'organizer.add_tag',
+        ))
+    def dispatch(self, request, *args, **kwargs):
+        return super().dispatch(
+            request, *args, **kwargs)
 
 
 class TagDelete(DeleteView):

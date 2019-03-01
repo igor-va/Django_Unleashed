@@ -1,13 +1,12 @@
-from django.contrib.auth.decorators import (
-    login_required, permission_required)
 from django.core.urlresolvers import reverse_lazy
 from django.shortcuts import get_object_or_404
-from django.utils.decorators import \
-    method_decorator
 from django.views.generic import (
     CreateView, DeleteView, DetailView, ListView)
 
 from core.utils import UpdateView
+from user.decorators import (
+    class_login_required,
+    require_authenticated_permission)
 
 from .forms import (
     NewsLinkForm, StartupForm, TagForm)
@@ -17,6 +16,8 @@ from .utils import (
     StartupContextMixin)
 
 
+@require_authenticated_permission(
+    'organizer.add_newslink')
 class NewsLinkCreate(
         NewsLinkGetObjectMixin,
         StartupContextMixin,
@@ -37,6 +38,8 @@ class NewsLinkCreate(
         return initial
 
 
+@require_authenticated_permission(
+    'organizer.delete_newslink')
 class NewsLinkDelete(
         NewsLinkGetObjectMixin,
         StartupContextMixin,
@@ -49,6 +52,8 @@ class NewsLinkDelete(
                 .get_absolute_url())
 
 
+@require_authenticated_permission(
+    'organizer.change_newslink')
 class NewsLinkUpdate(
         NewsLinkGetObjectMixin,
         StartupContextMixin,
@@ -58,11 +63,15 @@ class NewsLinkUpdate(
     slug_url_kwarg = 'newslink_slug'
 
 
+@require_authenticated_permission(
+    'organizer.add_startup')
 class StartupCreate(CreateView):
     form_class = StartupForm
     model = Startup
 
 
+@require_authenticated_permission(
+    'organizer.delete_startup')
 class StartupDelete(DeleteView):
     model = Startup
     success_url = reverse_lazy(
@@ -78,26 +87,22 @@ class StartupList(PageLinksMixin, ListView):
     paginate_by = 5  # 5 items per page
 
 
+@require_authenticated_permission(
+    'organizer.change_startup')
 class StartupUpdate(UpdateView):
     form_class = StartupForm
     model = Startup
 
 
+@require_authenticated_permission(
+    'organizer.add_tag')
 class TagCreate(CreateView):
     form_class = TagForm
     model = Tag
 
-    @method_decorator(login_required)
-    @method_decorator(
-        permission_required(
-            'organizer.add_tag',
-            raise_exception=True,
-        ))
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(
-            request, *args, **kwargs)
 
-
+@require_authenticated_permission(
+    'organizer.delete_tag')
 class TagDelete(DeleteView):
     model = Tag
     success_url = reverse_lazy(
@@ -113,11 +118,8 @@ class TagList(PageLinksMixin, ListView):
     model = Tag
 
 
+@require_authenticated_permission(
+    'organizer.change_tag')
 class TagUpdate(UpdateView):
     form_class = TagForm
     model = Tag
-
-    @method_decorator(login_required)
-    def dispatch(self, request, *args, **kwargs):
-        return super().dispatch(
-            request, *args, **kwargs)

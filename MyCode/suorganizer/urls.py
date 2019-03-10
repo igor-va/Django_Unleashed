@@ -12,7 +12,6 @@ Including another URLconf
     1. Add an import:  from blog import urls as blog_urls
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
-
 from django.conf.urls import include, url
 from django.contrib import admin
 from django.views.generic import (
@@ -24,6 +23,9 @@ from organizer.urls import (
     startup as startup_urls, tag as tag_urls)
 from user import urls as user_urls
 
+admin.site.site_header = 'Startup Organizer Admin'
+admin.site.site_title = 'Startup Organizer Site Admin'
+
 urlpatterns = [
     url(r'^$',
         RedirectView.as_view(
@@ -33,7 +35,7 @@ urlpatterns = [
         TemplateView.as_view(
             template_name='site/about.html'),
         name='about_site'),
-    url(r'^admin/', admin.site.urls),
+    url(r'^admin/', include(admin.site.urls)),
     url(r'^blog/', include(blog_urls)),
     url(r'^contact/', include(contact_urls)),
     url(r'^startup/', include(startup_urls)),
@@ -41,5 +43,6 @@ urlpatterns = [
     url(r'^user/',
         include(
             user_urls,
+            app_name='user',
             namespace='dj-auth')),
 ]

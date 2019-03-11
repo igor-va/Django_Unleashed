@@ -23,12 +23,22 @@ from django.views.decorators.debug import \
 
 from .forms import (
     UserChangeForm, UserCreationForm)
-from .models import User
+from .models import Profile, User
+
+
+class ProfileAdminInline(admin.StackedInline):
+    can_delete = False
+    model = Profile
+    exclude = ('slug',)
+
+    def view_on_site(self, obj):
+        return obj.get_absolute_url()
 
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin):
     # list view
+    actions = ['make_staff']
     list_display = (
         'get_name',
         'email',
@@ -100,6 +110,14 @@ class UserAdmin(admin.ModelAdmin):
         return super().get_form(
             request, obj, **kwargs)
 
+    def get_inline_instances(
+            self, request, obj=None):
+        if obj is None:
+            return tuple()
+        inline_instance = ProfileAdminInline(
+            self.model, self.admin_site)
+        return (inline_instance,)
+
     def get_urls(self):
         password_change = [
             url(r'^(.+)/password/$',
@@ -165,3 +183,16 @@ class UserAdmin(admin.ModelAdmin):
             request,
             self.change_user_password_template,
             context)
+
+    def make_staff(self, request, queryset):
+        rows_updated = queryset.update(
+            is_staff=True)
+        if rows_updated == 1:
+            message = '1 user was'
+        else:
+            message = '{} users were'.format(
+                rows_updated)
+        message += ' successfully made staff.'
+        self.message_user(request, message)
+    make_staff.short_description = (
+        'Allow user to access Admin Site.')

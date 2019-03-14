@@ -1,0 +1,104 @@
+[
+{
+  "model": "auth.group",
+  "fields": {
+    "name": "contributors",
+    "permissions": [
+      34,
+      35
+    ]
+  },
+  "pk": 1
+},
+{
+  "model": "user.user",
+  "fields": {
+    "password": "pbkdf2_sha256$20000$MiZF1NZeQJ01$TL3NkPIk1dfMp0/D3DVxS0vYVBTP+RkNxCFp46LbqtI=",
+    "last_login": null,
+    "is_superuser": true,
+    "email": "django@jambonsw.com",
+    "is_staff": true,
+    "is_active": true,
+    "groups": [],
+    "user_permissions": []
+  },
+  "pk": 1
+},
+{
+  "model": "user.user",
+  "fields": {
+    "password": "pbkdf2_sha256$20000$6Vofi9Prf4CY$uMsxNHpMdtwBOpX7otrMguYl8drTMcsFe91rC0Cp+E4=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "ada@djangogirls.org",
+    "is_staff": true,
+    "is_active": true,
+    "groups": [
+      1
+    ],
+    "user_permissions": []
+  },
+  "pk": 2
+},
+{
+  "model": "user.user",
+  "fields": {
+    "password": "pbkdf2_sha256$20000$QxshTqI4wmOL$4NRrgZD9y6cgiVMTv1viBpid5fvMQLtu1bEJDIyynI4=",
+    "last_login": "2019-03-10T17:55:05.846Z",
+    "is_superuser": true,
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "groups": [],
+    "user_permissions": []
+  },
+  "pk": 3
+},
+{
+  "model": "user.user",
+  "fields": {
+    "password": "pbkdf2_sha256$20000$303TslRudwqq$73Lu0GSeGRbFvspGSbM57w2ejsR9I41qBqpa2WpY2Cw=",
+    "last_login": null,
+    "is_superuser": false,
+    "email": "ivan@ivan.com",
+    "is_staff": false,
+    "is_active": false,
+    "groups": [],
+    "user_permissions": []
+  },
+  "pk": 4
+},
+{
+  "model": "user.profile",
+  "fields": {
+    "user": 1,
+    "name": "Andrew",
+    "slug": "andrew",
+    "about": "The author of this site!",
+    "joined": "2019-03-10T13:01:39.168Z"
+  },
+  "pk": 1
+},
+{
+  "model": "user.profile",
+  "fields": {
+    "user": 2,
+    "name": "Ada Lovelace",
+    "slug": "the_countess",
+    "about": "Django Girls is a non-profit organization that empowers and helps women to organize free, one-day programming workshops by providing tools, resources and support. It was born in Berlin and started by two Polish girls: Ola Sitarska and Ola Sendecka.",
+    "joined": "2019-03-10T13:01:39.249Z"
+  },
+  "pk": 2
+},
+{
+  "model": "user.profile",
+  "fields": {
+    "user": 4,
+    "name": "Ivan",
+    "slug": "ivan",
+    "about": "",
+    "joined": "2019-03-10T21:11:10.223Z"
+  },
+  "pk": 3
+}
+]

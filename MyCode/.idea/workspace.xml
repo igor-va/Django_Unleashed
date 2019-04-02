@@ -3,153 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="582df92f-6016-4529-89ba-809635de08a3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizer/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizer/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/organizer/templates/organizer/startup_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/organizer/templates/organizer/startup_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/suorganizer/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/suorganizer/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/MyCode.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/1.8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/fixtures/post_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0002_post_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0003_auto_20190131_1733.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0004_add_view_future_post_permission.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0005_post_permissions.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/0006_post_author.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/static/blog/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/base_blog.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_archive_month.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_archive_year.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_confirm_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_form_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/templates/blog/post_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/blog/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/templates/contact/base_contact.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/templates/contact/contact_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/contact/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/core/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/core/migrations/0001_sites_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/core/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/core/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/dev_requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/fixtures/sites_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/fixtures/user_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/fixtures/newslink_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/fixtures/startup_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/fixtures/tag_data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/management/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/management/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/management/commands/createtag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0002_tag_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0003_startup_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0004_newslink_data.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0005_newslink_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0006_newslink_unique_together_slug_startup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0007_auto_20190131_1733.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/0008_auto_20190310_1357.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/static/organizer/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/base_organizer.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/newslink_confirm_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/newslink_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/newslink_form_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/startup_confirm_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/startup_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/startup_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/startup_form_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/startup_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/tag_confirm_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/tag_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/tag_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/tag_form_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/templates/organizer/tag_list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/urls/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/urls/startup.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/urls/tag.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/organizer/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/static/site/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/static/site/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/static/site/skeleton.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/static/site/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/log_filters.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/suorganizer/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/templates/base.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/templates/site/about.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/decorators.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/forms.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/management/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/management/commands/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/management/commands/createsuperuser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/management/commands/createuser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/migrations/0001_user.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/migrations/0002_profile.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/migrations/0003_'user_data'.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/base_user.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/email_create.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/logged_out.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/login_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_change_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_change_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_complete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_confirm.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_email.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_sent.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/password_reset_subject.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/profile_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/profile_form_update.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/resend_activation.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/subject_create.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/user_activate.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/user_confirm_delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/user_create.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/templates/user/user_create_done.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/utils.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MyCodes/user/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organizer/migrations/0002_tag_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizer/migrations/0002_tag_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/organizer/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/organizer/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -160,32 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/suorganizer/settings.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/blog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/organizer/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="107" lean-forward="true" selection-end-line="159" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="startup_detail.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/organizer/templates/organizer/startup_detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="145" column="14" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
+            <state relative-caret-position="460">
+              <caret line="105" column="19" lean-forward="true" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -225,8 +64,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/organizer/templates/organizer/tag_detail.html" />
-        <option value="$PROJECT_DIR$/user/templates/user/password_change_done.html" />
         <option value="$PROJECT_DIR$/user/templates/user/password_change_form.html" />
         <option value="$PROJECT_DIR$/user/templates/user/password_reset_form.html" />
         <option value="$PROJECT_DIR$/user/templates/user/password_reset_subject.txt" />
@@ -256,14 +93,11 @@
         <option value="$PROJECT_DIR$/user/migrations/0003_'user_data'.py" />
         <option value="$PROJECT_DIR$/blog/forms.py" />
         <option value="$PROJECT_DIR$/blog/utils.py" />
-        <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/user/templates/user/profile_detail.html" />
         <option value="$PROJECT_DIR$/suorganizer/urls.py" />
         <option value="$PROJECT_DIR$/organizer/admin.py" />
         <option value="$PROJECT_DIR$/blog/admin.py" />
         <option value="$PROJECT_DIR$/user/forms.py" />
-        <option value="$PROJECT_DIR$/user/admin.py" />
-        <option value="$PROJECT_DIR$/blog/models.py" />
         <option value="$PROJECT_DIR$/user/models.py" />
         <option value="$PROJECT_DIR$/organizer/management/commands/createuser.py" />
         <option value="$PROJECT_DIR$/user/management/createsuperuser.py" />
@@ -273,9 +107,14 @@
         <option value="$PROJECT_DIR$/user/apps.py" />
         <option value="$PROJECT_DIR$/user/__init__.py" />
         <option value="$PROJECT_DIR$/blog/signals.py" />
-        <option value="$PROJECT_DIR$/suorganizer/settings.py" />
         <option value="$PROJECT_DIR$/organizer/models.py" />
         <option value="$PROJECT_DIR$/organizer/templates/organizer/startup_detail.html" />
+        <option value="$PROJECT_DIR$/organizer/migrations/0002_tag_data.py" />
+        <option value="$PROJECT_DIR$/blog/views.py" />
+        <option value="$PROJECT_DIR$/suorganizer/settings.py" />
+        <option value="$PROJECT_DIR$/organizer/views.py" />
+        <option value="$PROJECT_DIR$/blog/models.py" />
+        <option value="$PROJECT_DIR$/user/admin.py" />
       </list>
     </option>
   </component>
@@ -286,9 +125,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="811" />
-    <option name="width" value="1116" />
-    <option name="height" value="1047" />
+    <option name="x" value="704" />
+    <option name="width" value="901" />
+    <option name="height" value="860" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -307,25 +146,7 @@
             <path>
               <item name="MyCode" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyCode" type="462c0819:PsiDirectoryNode" />
-              <item name="organizer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyCode" type="462c0819:PsiDirectoryNode" />
-              <item name="organizer" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyCode" type="462c0819:PsiDirectoryNode" />
-              <item name="organizer" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="organizer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyCode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="MyCode" type="462c0819:PsiDirectoryNode" />
-              <item name="suorganizer" type="462c0819:PsiDirectoryNode" />
+              <item name="blog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -388,29 +209,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="811" y="0" width="1116" height="1047" extended-state="0" />
+    <frame x="704" y="0" width="901" height="860" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49795082" visible="true" weight="0.20454545" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287483" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3287483" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3287483" />
-      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49795082" visible="true" weight="0.22827347" />
       <window_info id="Structure" order="1" sideWeight="0.5020492" side_tool="true" weight="0.21524663" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.40343347" />
       <window_info id="Favorites" order="2" sideWeight="0.5020492" side_tool="true" weight="0.21524663" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3287483" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3287483" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.2861073" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.3287483" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3287483" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,9 +239,6 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -433,20 +251,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/user/templates/user/password_reset_email.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="7" lean-forward="true" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user/templates/user/base_user.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="49" selection-start-column="49" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/templates/user/logged_out.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -598,13 +402,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="681">
-          <caret line="58" column="27" lean-forward="true" selection-start-line="58" selection-start-column="27" selection-end-line="58" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/user/templates/user/profile_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -643,13 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/user/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="184" column="20" lean-forward="true" selection-start-line="184" selection-start-column="20" selection-end-line="184" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/fixtures/post_data.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -662,13 +452,6 @@
     <entry file="file://$PROJECT_DIR$/fixtures/user_data.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1234" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/blog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-119">
-          <caret line="32" column="25" lean-forward="true" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/user/models.py">
@@ -745,17 +528,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/suorganizer/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" column="4" lean-forward="true" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/organizer/templates/organizer/startup_detail.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="474">
           <caret line="145" column="14" selection-start-line="145" selection-start-column="14" selection-end-line="145" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/organizer/migrations/0002_tag_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="59" column="5" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/suorganizer/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/organizer/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="128" lean-forward="true" selection-start-line="128" selection-end-line="128" />
+          <folding>
+            <element signature="e#0#49#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2661">
+          <caret line="188" column="30" lean-forward="true" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="105" column="19" lean-forward="true" selection-start-line="105" selection-start-column="19" selection-end-line="105" selection-end-column="19" />
         </state>
       </provider>
     </entry>

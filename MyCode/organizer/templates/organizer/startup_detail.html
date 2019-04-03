@@ -1,4 +1,6 @@
 {% extends parent_template|default:"organizer/base_organizer.html" %}
+{% load obfuscate_email %}
+{% load partial_post_list %}
 
 {% block title %}
 {{ block.super }} - {{ startup.name }}
@@ -33,7 +35,7 @@
     <dt>Website</dt>
       <dd>{{ startup.website|urlize }}</dd>
     <dt>Contact</dt>
-      <dd>{{ startup.contact }}</dd>
+      <dd>{{ startup.contact|obfuscate }}</dd>
 
     {% with tag_list=startup.tags.all %}
       <dt>Tag{{ tag_list|pluralize }}</dt>
@@ -43,6 +45,14 @@
           </a></dd>
         {% endfor %}
     {% endwith %}
+
+    <dt>Feeds</dt>
+      <dd>
+        <a href="{{ startup.get_feed_atom_url }}">
+          Atom</a></dd>
+      <dd>
+        <a href="{{ startup.get_feed_rss_url }}">
+          RSS</a></dd>
 
   </dl>
 
@@ -107,37 +117,7 @@
           </section>
       {% endif %}
 
-      {% if perms.blog.view_future_post and startup.blog_posts.all or startup.published_posts|length > 0 %}
-        {% if startup.newslink_set.all or perms.organizer.add_newslink %}
-          <section class="meta one-third column">
-        {% else %}
-          <section class="meta offset-by-two two-thirds column">
-        {% endif %}
-        {% if perms.blog.view_future_post and startup.blog_posts.all %}
-          {% with post_list=startup.blog_posts.all %}
-            <h3>Blog Post{{ post_list|pluralize }}</h3>
-            <ul>
-              {% for post in post_list %}
-                <li>
-                  <a href="{{ post.get_absolute_url }}">
-                    {{ post.title|title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-          {% endwith %}
-        {% elif startup.published_posts|length > 0 %}
-            <h3>Blog Post{{ startup.published_posts|pluralize }}</h3>
-            <ul>
-              {% for post in startup.published_posts %}
-                <li>
-                  <a href="{{ post.get_absolute_url }}">
-                    {{ post.title|title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-        {% endif %}
-          </section>
-      {% endif %}
+      {% format_post_list startup opposite=startup.newslink_set.all perm_button=perms.organizer.add_newslink %}
 
     </div> <!-- row -->
   {% endif %}
